@@ -1,0 +1,30 @@
+﻿<Page
+		x:Class="CoreTweetTest.MainPage"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="using:CoreTweetTest"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d">
+
+	<Grid
+			 Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+		<Grid.RowDefinitions>
+			<RowDefinition />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<StackPanel Margin="80,80,80,80">
+			<Button Click="OnAuthorize">1st. Authorize Via External Web Browser</Button>
+			<Button Click="PinExeCute">2nd. PIN Authoritarian</Button>
+			<TextBox x:Name="_pincodeTextBox" Text="Put PIN" />
+			<Button Click="OnTweet">Tweet Now</Button>
+			<TextBox x:Name="_statusTextBox" Text="Message" />
+		</StackPanel>
+		<StackPanel Grid.Row="1" Margin="75,75,75,0">
+			<TextBlock TextWrapping="Wrap" Margin="0,0,0,0" Text="Message" />
+			<ScrollViewer Height="200" VerticalScrollBarVisibility="Auto" BorderThickness="1" BorderBrush="RoyalBlue" Opacity="0.5" >
+				<TextBlock x:Name="_debugMessage" TextWrapping="Wrap" Text="" />
+			</ScrollViewer>
+		</StackPanel>
+	</Grid>
+</Page>
